@@ -10,6 +10,7 @@ nota2 = float(input("Digite a segunda nota (peso 3): "))
 if not nota_valida(nota1) or not nota_valida(nota2):
     print("\n❌ ERRO: As notas devem estar entre 0 e 100.")
     exit()  # Encerra o programa
+#BIBLIOTECA SYS - SYS.EXIT('NOTA INVALIDA')
 
 # Entrada da carga horária e faltas
 carga_horaria = int(input("Digite a carga horária da disciplina (em horas/aula): "))
