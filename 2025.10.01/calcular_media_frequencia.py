@@ -28,7 +28,7 @@ intFaltas = int(input('Informe a quantidade de faltas do aluno: '))
 # TODO: Validar se a quantidade de faltas é maior ou igual a zero
 # e menor ou igual a carga horária
 if not (0 <= intFaltas <= intCargaHoraria):
-   sys.exit(f'Quantidade de Faltas inválida! Deve ser entre 1 e {întCargaHoraria} horas/aula.')
+   sys.exit(f'Quantidade de Faltas inválida! Deve ser entre 1 e {intCargaHoraria} horas/aula.')
 
 # Calculando a média ponderada e arredondando 
 # para o inteiro mais próximo
