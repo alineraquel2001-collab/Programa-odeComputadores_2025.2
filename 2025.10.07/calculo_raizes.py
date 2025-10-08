@@ -17,51 +17,35 @@
 			  O programa deve calcular e exibir a raiz única;
 			  
 			- delta < 0 : a equação não possui raízes reais. 
-			  O programa deve informar ao usuário que não existem raízes reais.
-			  
-		- Tratar as exceções devidas.
+			  O programa deve informar ao usuário que não existem raízes reais.		
 '''
+# Solicita os coeficientes da equação ao usuário
+a = float(input("Informe o valor de a: "))
+b = float(input("Informe o valor de b: "))
+c = float(input("Informe o valor de c: "))
 
-import math
+# Verifica se a = 0
+if a == 0:
+    print("Não é uma equação do 2º grau. (a = 0)")
+else:
+    # Calcula o discriminante (delta)
+    delta = b**2 - 4*a*c
+    print(f"Delta (Δ) = {delta}")
 
-def calcular_raizes():
-    try:
-        print("Calculadora de equações do 2º grau (ax² + bx + c = 0)")
+    if delta > 0:
+        # Duas raízes reais distintas
+        raiz1 = (-b + math.sqrt(delta)) / (2 * a)
+        raiz2 = (-b - math.sqrt(delta)) / (2 * a)
+        print("A equação possui duas raízes reais distintas:")
+        print(f"x1 = {raiz1}")
+        print(f"x2 = {raiz2}")
 
-        # Entrada dos coeficientes
-        a = float(input("Digite o valor de a: "))
-        b = float(input("Digite o valor de b: "))
-        c = float(input("Digite o valor de c: "))
+    elif delta == 0:
+        # Uma raiz real
+        raiz = -b / (2 * a)
+        print("A equação possui uma raiz real (raiz dupla):")
+        print(f"x = {raiz}")
 
-        # Verificação se é equação do 2º grau
-        if a == 0:
-            print("Este não é uma equação do 2º grau (a = 0). Encerrando o programa.")
-            return
-
-        # Cálculo do discriminante (delta)
-        delta = b**2 - 4*a*c
-        print(f"Delta = {delta}")
-
-        if delta > 0:
-            # Duas raízes reais
-            raiz1 = (-b + math.sqrt(delta)) / (2 * a)
-            raiz2 = (-b - math.sqrt(delta)) / (2 * a)
-            print("A equação possui duas raízes reais distintas:")
-            print(f"x1 = {raiz1}")
-            print(f"x2 = {raiz2}")
-        elif delta == 0:
-            # Uma raiz real
-            raiz = -b / (2 * a)
-            print("A equação possui uma raiz real:")
-            print(f"x = {raiz}")
-        else:
-            # Nenhuma raiz real
-            print("A equação não possui raízes reais (delta < 0).")
-
-    except ValueError:
-        print("Erro: Entrada inválida. Certifique-se de digitar números válidos.")
-    except Exception as e:
-        print(f"Ocorreu um erro inesperado: {e}")
-
-# Executar o programa
-calcular_raizes()
+    else:
+        # Delta negativo: sem raízes reais
+        print("A equação não possui raízes reais (delta < 0).")
