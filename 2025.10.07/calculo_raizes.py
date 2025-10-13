@@ -27,7 +27,7 @@ import math
 # input(): Lê o valor digitado pelo usuário como texto (string).
 # float(): Converte a string para número decimal (ponto flutuante).
 # Solicita os coeficientes da equação ao usuário
-a = float(input("Informe o valor de a: "))
+
 b = float(input("Informe o valor de b: "))
 c = float(input("Informe o valor de c: "))
 
