@@ -55,31 +55,3 @@ def calcular_imc():
 
 # Executa o programa
 calcular_imc()
-
-'''
-import sys
-
-# Entrada de dados com tratamento de erro
-try:
-   fltPeso   = float(input('Informe o seu peso em quilogramas (ex: 70.5): '))
-   fltAltura = float(input('Informe a sua altura em metros (ex: 1.75)...: '))
-# Tratamento de erro para valores não numéricos
-except ValueError:
-   sys.exit('ERRO: Você deve digitar um valor numérico.')
-# Tratamento de erro para outros tipos de erro
-except Exception as strErro:
-   sys.exit(f'ERRO: {strErro}')
-# Cálculo do IMC caso tenha passado pelas validações
-else:
-   # Verifica se a altura é menor ou igual a zero
-   if fltAltura <= 0:
-      sys.exit('ERRO: A altura deve ser maior que zero.')
-
-   # Verifica se o peso é menor ou igual a zero
-   if fltPeso <= 0:
-      sys.exit('ERRO: O peso deve ser maior que zero.')
-
-if:
-    float_peso <= 0 or float_altura <= 0
-    sys.exit('ERRO: Info de peso e altura devem ser maiores que Zero.')
-'''
