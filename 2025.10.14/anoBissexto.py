@@ -33,3 +33,5 @@ try:
 #Captura o erro do tipo ValueError que acontece se a conversão para inteiro falhar            
 except ValueError:
         print("Por favor, insira um número inteiro válido para o ano.")
+
+#OLHAR EXEMPLO DO PROFESSOR NO GIT

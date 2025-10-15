@@ -30,6 +30,55 @@
 
    Dica: Utilize a biblioteca math.
 '''
+import math
 
-import sys, math
+try:
+    #Digitar lados dos triangulos
+    ladoA = float(input("Digite o comprimento do lado a: "))
+    ladoB = float(input("Digite o comprimento do lado b: "))
+    ladoC = float(input("Digite o comprimento do lado c: "))
+
+    # Verifica se os lados são positivos
+    if ladoA <= 0 or ladoB <= 0 or ladoC <= 0:
+        print("Os comprimentos dos lados devem ser maiores que zero.")
+    else:
+        # Verifica se os lados formam um triângulo
+        if (ladoA + ladoB > ladoC) and (ladoA + ladoC > ladoB) and (ladoB + ladoC > ladoA):
+            
+            # Calcula os ângulos usando a Lei dos Cossenos
+            # cos(C) = (a² + b² - c²) / (2ab)
+            def calcula_angulo(a, b, c):
+                cos_c = (a**2 + b**2 - c**2) / (2 * a * b)
+                cos_c = min(1, max(-1, cos_c))  # Corrige possíveis erros numéricos
+                return math.degrees(math.acos(cos_c))
+            
+            ang_a = calcula_angulo(ladoB, ladoC, ladoA)
+            ang_b = calcula_angulo(ladoA, ladoC, ladoB)
+            ang_c = calcula_angulo(ladoA, ladoC, ladoB)
+
+            print(f"Ângulos do triângulo: A={ang_a:.2f}°, B={ang_b:.2f}°, C={ang_c:.2f}°")
+
+            # Classificação quanto aos lados
+            if ladoA == ladoB == ladoC:
+                tipo_lados = "Equilátero"
+            elif ladoA == ladoB or ladoB == ladoC or ladoA == ladoC:
+                tipo_lados = "Isósceles"
+            else:
+                tipo_lados = "Escaleno"
+
+            # Classificação quanto aos ângulos
+            if any(abs(angulo - 90) < 1e-5 for angulo in [ang_a, ang_b, ang_c]):
+                tipo_angulo = "Retângulo"
+            elif any(angulo > 90 for angulo in [ang_a, ang_b, ang_c]):
+                tipo_angulo = "Obtuso"
+            else:
+                tipo_angulo = "Agudo"
+
+            print(f"Classificação do triângulo quanto aos lados: {tipo_lados}")
+            print(f"Classificação do triângulo quanto aos ângulos: {tipo_angulo}")
+        else:
+            print("Não é possível formar um triângulo com esses lados.")
+
+except ValueError:
+    print("Por favor, insira valores numéricos válidos para os lados.")
 
