@@ -29,6 +29,8 @@
       - Considere que os ângulos são expressos em graus.
 
    Dica: Utilize a biblioteca math.
+     Dica: Utilize a biblioteca math.
+   https://docs.python.org/3/library/math.html
 '''
 import math
 
