@@ -32,7 +32,7 @@
      Dica: Utilize a biblioteca math.
    https://docs.python.org/3/library/math.html
 '''
-import math
+import math 
 
 try:
     #Digitar lados dos triangulos
