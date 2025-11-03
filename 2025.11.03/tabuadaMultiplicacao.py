@@ -1,6 +1,6 @@
 '''
    Reescreva o programa a seguir usando o laço FOR.
-'''
+
 
 # Definição das variáveis
 intMultiplicando = 1
@@ -15,3 +15,15 @@ while intMultiplicando <= 10:
    print(f'{intMultiplicador} x {intMultiplicando} = {intProduto}')
    # Incremento do multiplicando
    intMultiplicando += 1
+   
+'''
+
+# Definição das variáveis
+intMultiplicador = 6
+
+# Laço FOR para exibir a tabuada do 6
+for intMultiplicando in range(1, 11):
+    # Cálculo do produto
+    intProduto = intMultiplicador * intMultiplicando
+    # Exibição do resultado
+    print(f'{intMultiplicador} x {intMultiplicando} = {intProduto}')
