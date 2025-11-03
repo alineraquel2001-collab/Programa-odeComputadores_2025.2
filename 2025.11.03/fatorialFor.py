@@ -1,6 +1,6 @@
 '''
    Reescreva o programa a seguir usando o laço FOR.
-'''
+
 import sys
 
 try:
@@ -24,3 +24,29 @@ else:
       intAuxiliar -= 1
 
    print(f'{intNumero}! = {intFatorial}')
+'''
+
+import sys
+
+try:
+    intNumero = int(input('Informe um valor inteiro: '))
+except ValueError:
+    sys.exit('ERRO: O valor informado deve ser inteiro...')
+except:
+    sys.exit(f'ERRO: {sys.exc_info()}')
+else:
+    if intNumero < 0:
+        sys.exit('ERRO: Não existe fatorial de número negativo...')
+
+    if intNumero == 0 or intNumero == 1:
+        sys.exit(f'{intNumero}! = 1')
+
+    intFatorial = 1
+
+    # Usando o laço FOR para calcular o fatorial
+    for i in range(intNumero, 1, -1):
+        intFatorial *= i
+
+    print(f'{intNumero}! = {intFatorial}')
+
+
