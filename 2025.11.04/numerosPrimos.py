@@ -48,4 +48,5 @@ else:
     else:
         print(f"{numero} não é um número primo.")
 
+  
 '''
