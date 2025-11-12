@@ -2,7 +2,7 @@ intQuant = 5
 
 #USANDO FOR
 for i in range (1, intQuant+1):
-    print ('*' *i)
+    print ('*' * i)
 
 
 
