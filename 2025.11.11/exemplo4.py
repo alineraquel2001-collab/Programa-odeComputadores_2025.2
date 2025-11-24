@@ -6,7 +6,6 @@ if ' ' in strTexto:
     sys.exit('Você digitou mais de uma palavra!')
 
 #Inverter palavra
-
 strTextoInvertido = strTexto[::-1]
 print(strTexto)
 print(strTextoInvertido)
