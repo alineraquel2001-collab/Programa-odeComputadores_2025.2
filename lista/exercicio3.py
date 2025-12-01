@@ -28,3 +28,4 @@ for aluno in alunos:
     print(f"{aluno[0]:20}\t{aluno[1]:.1f}\t{aluno[2]:.1f}\t{aluno[3]:.1f}")
 
 print("--------------------------------------------------")
+
