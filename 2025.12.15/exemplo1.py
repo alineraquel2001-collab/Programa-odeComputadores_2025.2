@@ -1,13 +1,19 @@
 '''
    Fazer um programa que leia o conteúdo do arquivo resumo_lotr.txt e imprima na tela.
 '''
-import os
+import os, sys
 
-diretorio = os.path.dirname(__file__)
-arqLeitura = open(f'{diretorio}/resumo_lotr.txt','r', encoding='utf-8')
+try:
+    diretorio = os.path.dirname(__file__)
+    arqLeitura = open(f'{diretorio}/resumo_lotr.txt','r', encoding='utf-8')
+except FileNotFoundError:
+    sys.exit('Arquivo não encontrado!!!')
+except Exception as e:
+    sys.exit(f'Erro: {e}')
 
-conteudo = arqLeitura.read()
+else:
+    conteudo = arqLeitura.read()
 
-print(conteudo)
+    print(conteudo)
 
-arqLeitura.close()
+    arqLeitura.close()
