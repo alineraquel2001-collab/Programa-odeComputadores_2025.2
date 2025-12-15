@@ -4,7 +4,7 @@
 import os
 
 diretorio = os.path.dirname(__file__)
-arqLeitura = open(f'{diretorio}/resumo_lotr.txt','r')
+arqLeitura = open(f'{diretorio}/resumo_lotr.txt','r', encoding='utf-8')
 
 conteudo = arqLeitura.read()
 
