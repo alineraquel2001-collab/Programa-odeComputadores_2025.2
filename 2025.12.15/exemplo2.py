@@ -17,7 +17,7 @@ else:
     lstNumeros = list()
 
     while True:
-        linha = arqLeitura.readline()
+        linha = arqLeitura.readline().strip()
 
         if not linha: break
 
