@@ -75,7 +75,7 @@ fltVariancia = statistics.variance(lstNumeros)
 fltDesvioPadrao = statistics.stdev(lstNumeros)
 
 try:
-     arqResultados = open(f'{strDiretorio}/resultados.txt', 'w')	
+     arqResultados = open(f'{strDiretorio}/resultados.txt', 'w', encoding='utf-8')
 
 except Exception as e:
       sys.exit(f'ERRO: {e}')    
