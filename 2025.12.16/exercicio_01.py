@@ -65,7 +65,7 @@ else:
    arqLeitura.close()
 
 intSoma = sum(lstNumeros)
-flttMedia = intSoma/len(lstNumeros)
+fltMedia = intSoma/len(lstNumeros)
 
 
 
