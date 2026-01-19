@@ -88,3 +88,4 @@ else:
 
       # Fechando o arquivo de resultados após a escrita
 arqResultados.close()
+
